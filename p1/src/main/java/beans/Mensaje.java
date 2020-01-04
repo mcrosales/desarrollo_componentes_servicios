@@ -1,4 +1,4 @@
-package prueba;
+package beans;
 
 public class Mensaje {
 

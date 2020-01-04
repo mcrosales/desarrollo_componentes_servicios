@@ -1,16 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html lang="en"
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html">
-      
+
 
 <head>
-<title>Ejemplo de prueba con JSF!</title>
+    <title>Practica 1: Selector de noticias</title>
 </head>
 <body>
-	#{holaMundo.getMessage()}
+<div align="center"><h1>UGR-DSS News fetcher</h1></div>
+<br></br>
+<div align="center">
+<h:form>
+    <h:inputText id="user_name" value="#{user.id}" required="true" requiredMessage="Type at least one character" ></h:inputText>
+    <br /><br />
+    <h:commandButton id="submit" action="user_page" value="Sign In" />
+</h:form>
+</div>
 </body>
 </html>
  
