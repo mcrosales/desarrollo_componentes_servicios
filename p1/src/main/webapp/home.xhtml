@@ -14,7 +14,8 @@
 <br></br>
 <div align="center">
 <h:form>
-    <h:inputText id="user_name" value="#{user.id}" required="true" requiredMessage="Type at least one character" ></h:inputText>
+    <h:inputText id="user_name" value="#{user.name}" required="true" requiredMessage=" Type at least one character" ></h:inputText>
+    <h:message for="user_name" style="color: red"></h:message>
     <br /><br />
     <h:commandButton id="submit" action="user_page" value="Sign In" />
 </h:form>
