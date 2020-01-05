@@ -10,10 +10,12 @@
 </head>
 <body>
 <div align="center"><h1>UGR-DSS News fetcher</h1></div>
-<br></br>
-<div align="center"><h1>Welcome dear #{user.getName()}</h1></div>
+<div align="center"><h2>Welcome dear #{user.getName()}</h2></div>
 <div align="center"><h3>Today's news</h3>
-    <h:graphicImage value="/resources/img/fire.jpg"/>
+    <h:graphicImage value="#{headlines.headline.image}"/>
+    <h:form>
+        <h:commandButton action="#{headlines.previousHeadline}" value="Previous"/>   <h:commandButton action="#{headlines.nextHeadline}" value="Next"/>
+    </h:form>
 </div>
 </body>
 </html>

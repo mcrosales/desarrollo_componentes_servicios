@@ -51,4 +51,7 @@ public class Headline {
         this.description = description;
         this.url = url;
     }
+
+    public Headline() {
+    }
 }
