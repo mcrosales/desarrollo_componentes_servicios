@@ -13,8 +13,13 @@
 <div align="center"><h2>Welcome dear #{user.getName()}</h2></div>
 <div align="center"><h3>Today's news</h3>
     <h:graphicImage value="#{headlines.headline.image}"/>
+    <br/>
+    <div>
+        <h:outputLabel>#{headlines.headline.description}</h:outputLabel>
+    </div>
     <h:form>
-        <h:commandButton action="#{headlines.previousHeadline}" value="Previous"/>   <h:commandButton action="#{headlines.nextHeadline}" value="Next"/>
+        <h:commandButton action="#{headlines.previousHeadline}" value="Previous" style="margin-right: 10px; margin-top: 5px"/>
+        <h:commandButton action="#{headlines.nextHeadline}" value="Next" style="margin-top: 5px"/>
     </h:form>
 </div>
 </body>
