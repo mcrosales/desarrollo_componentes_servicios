@@ -16,7 +16,7 @@ public class Headlines {
 
     private Headline headline;
 
-    private final Integer ITEMS_SIZE = 2;
+    private final Integer ITEMS_SIZE = 4;
 
     public Headline getHeadline() {
         return headline;
@@ -54,6 +54,16 @@ public class Headlines {
                 "Strong winds hamper efforts to control flames",
                 "https://www.bbc.com/news/world-australia-50992323");
         headlines.add(secondHeadLine);
+
+        Headline thirdHeadLine = new Headline(3, "/resources/img/robots.jpg",
+                "The 8 Things We Expect to See at CES 2020",
+                "https://www.wired.com/story/ces-2020-preview/");
+        headlines.add(thirdHeadLine);
+
+        Headline fourthHeadLine = new Headline(4, "/resources/img/protest.jpg",
+                "Protesters Across US Rally Against A War With Iran",
+                "https://www.huffpost.com/entry/no-war-iran-protest-rally_n_5e11374ec5b6b5a713bb319a");
+        headlines.add(fourthHeadLine);
 
         headline = firstHeadLine;
         currentHeadline = 0;

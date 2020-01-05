@@ -3,22 +3,39 @@
 
 <html lang="en"
       xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html" xmlns:c="http://java.sun.com/jsf/core">
 
 <head>
     <title>Practica 1: Selector de noticias</title>
 </head>
 <body>
-<div align="center"><h1>UGR-DSS News fetcher</h1></div>
-<div align="center"><h2>Welcome dear #{user.getName()}</h2></div>
-<div align="center"><h3>Today's news</h3>
-    <h:graphicImage value="#{headlines.headline.image}"/>
+<div>
+    <h:form>
+        <h:outputLabel value="Text color:" for="color" style="margin-left: 1px"></h:outputLabel>
+        <h:selectOneRadio value="#{color.name}" id="color" required="true"
+                          label="engine">
+
+            <c:selectItem itemValue="black" itemLabel="Default"/>
+            <c:selectItem itemValue="red" itemLabel="Red"/>
+            <c:selectItem itemValue="blue" itemLabel="Blue"/>
+        </h:selectOneRadio>
+        <h:commandButton action="#{color.changeColor}" value="Save"></h:commandButton>
+    </h:form>
+    <div align="center"><h1 style="color: #{color.name}">UGR-DSS News fetcher</h1></div>
+</div>
+<div align="center"><h2 style="color: #{color.name}">Welcome dear #{user.getName()}</h2></div>
+<div align="center"><h3 style="color: #{color.name}">Today's news</h3>
+    <h:graphicImage value="#{headlines.headline.image}" width="300" height="200"/>
+    <br/>
     <br/>
     <div>
-        <h:outputLabel>#{headlines.headline.description}</h:outputLabel>
+        <h:outputLabel style="color: #{color.name}">#{headlines.headline.description}</h:outputLabel>
+        <h:outputLink value="#{headlines.headline.url}" style="margin-left: 10px"
+                      title="Read full history">-></h:outputLink>
     </div>
     <h:form>
-        <h:commandButton action="#{headlines.previousHeadline}" value="Previous" style="margin-right: 10px; margin-top: 5px"/>
+        <h:commandButton action="#{headlines.previousHeadline}" value="Previous"
+                         style="margin-right: 10px; margin-top: 5px"/>
         <h:commandButton action="#{headlines.nextHeadline}" value="Next" style="margin-top: 5px"/>
     </h:form>
 </div>
