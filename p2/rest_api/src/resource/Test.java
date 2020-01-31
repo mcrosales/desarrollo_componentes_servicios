@@ -11,7 +11,7 @@ public class Test {
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public String getTestService() {
-	return "Hello World! This is coming from webservice!!";
+	return "Hello World! This is coming from webservice cjn!!";
 	}
 
 }
